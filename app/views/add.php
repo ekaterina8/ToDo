@@ -29,9 +29,27 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+>
+    <title>Votre resume</title>
+    <link href="http://agitki.ru/_bl/1/69296067.png" rel="shortcut icon" />
   </head>
 
   <body>
+
+    <form method="POST" action="resum.php">
+        <center><p>Представьтесь, пожалуйста:</p><br />
+            <input type="text" name="name" size="50" autofocus tabindex="1" placeholder="Как Вас зовут?" /><br />
+            
+        <div class="pourpar"> 
+            Придумайте пароль
+            <input type="password" name="parol" required /><br />
+            Повторите
+            <input type="password" name="repeteParol" required /><br />
+        </div>
+
+            <input type="submit" name="send" value="Отправить" /><br />
+        </center>
+    </form>
 
     <div class="container">
       <div class="header">
