@@ -15,7 +15,7 @@ if ($request->getRoute() == "delete") {
 }
 
 if ($request->getRoute() == "add") {
-    todoAdd();
+    todoAdd($request);
 }
 
 function todoList($request)
@@ -32,32 +32,15 @@ function todoList($request)
 
 function todoDelete()
 {
-    if ( !isset($_GET['id']) ) {
-        echo "Id not found";
-        return;   
-    }
-    echo $_GET['id'];
-    echo "<br />Delete page";
+   
 }
 
 // http://localhost:12345/?r=add
-function todoAdd()
+function todoAdd($request)
 {
-      include __DIR__."/app/views/add.php";
-
-   if(!isset($_GET['form'])){
-        echo "Not found form";
-        return;
-    }
-
-    if ($_POST["send"]) {
-    
-        echo $request->getPost("name");
-        echo "<br/>";
-        echo $request->getPost("parol");
-        echo "<br/>";   
-    }
-   
+          
+    echo $request->getPost("task");
+    include __DIR__."/app/views/add.php";
 }
 
 function todoShow()

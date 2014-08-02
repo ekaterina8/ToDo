@@ -13,10 +13,12 @@ ls -al
 
 для инициализации репозитория
 cd /var/www/creersite/www/todo
-git init
+git init   -   только один раз!!!
 
 Основные работы с гитом:
 git status
+
+git rm - удаление
 
 Добавляем репозиторий git add toDo.php
 
@@ -30,13 +32,19 @@ git commit -am "second commit" - все файлы
 git diff - показывает изменения
 
 commit - создает ревизию
-
+git add * - все файлы
 
 git log - показывает id каждого commit
 затем git chechout "id"
 
 git checkout master - переходим к верхнему commit
 
+Клонирование - выйти из папки в путь, где будет нова папка var/www
+git clone git@source.tvorzasp.com:katerina/example.git example2-какую папку создавать
+
+git pull - забирает изменения добавленные в origin
+
+rm -rf ./www/
 <?php
 
 class Car {
@@ -77,3 +85,6 @@ class Request{
 	getPost()
 	getRout()
 }
+
+ф-ии и классы по работе с времене
+на бу страпе вывести красивую табличку на list - главная страничка

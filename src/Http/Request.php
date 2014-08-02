@@ -52,5 +52,4 @@ class Request
         return $default;
     }
 
-    // add method getPost($name, $default)
 }

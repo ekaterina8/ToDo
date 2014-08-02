@@ -29,14 +29,14 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
->
+
     <title>Votre resume</title>
     <link href="http://agitki.ru/_bl/1/69296067.png" rel="shortcut icon" />
   </head>
 
   <body>
 
-    <form method="POST" action="resum.php">
+   <!--  <form method="POST" action="resum.php">
         <center><p>Представьтесь, пожалуйста:</p><br />
             <input type="text" name="name" size="50" autofocus tabindex="1" placeholder="Как Вас зовут?" /><br />
             
@@ -50,22 +50,36 @@
             <input type="submit" name="send" value="Отправить" /><br />
         </center>
     </form>
+ -->
+   
+      <div class="container">
+        <div class="header">
+          <ul class="nav nav-pills pull-right">
+            <li><a href="/">Главная</a></li>
+            <li class="active"><a href="/?r=add">Добавить</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <h3 class="text-muted">Project name</h3>
+        </div>
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">Project name</h3>
+      <div>
+          <form role="form" method="POST" action="/?r=add">
+            <div class="form-group">
+              <label for="task">Ваша задача</label>
+              <input type="text" class="form-control" name="task" id="task" placeholder="Новая задача">
       </div>
 
-      <div class="jumbotron">
-        <h1><?php echo $pageTitle; ?></h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      <div class="checkbox">
+        <label>
+            <input type="checkbox"> Выполнено
+        </label>
       </div>
+  
+      <button type="submit" class="btn btn-default">Отправить</button>
+          </form>
+      </div>
+
 
       <div class="row marketing">
         <div class="col-lg-6">
