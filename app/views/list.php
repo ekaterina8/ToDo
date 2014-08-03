@@ -44,34 +44,40 @@
         <h3 class="text-muted">Project name</h3>
       </div>
 
-      <div class="jumbotron">
-        <h1><?php echo $pageTitle; ?></h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
-      </div>
+      <table class="table table-hover">
+      <table class="table table-bordered">
+        <tr class="active">
+            <td width=8%>№ п/п</td>
+            <td width=42%>Пользователь</td>
+            <td width=20%>E-mail</td>
+            <td width=30%>Перейти к задачам пользователя</td>
+        </tr>
+        <tr class="active">
+            <td>2.1</td>
+            <td>2.2</td>
+            <td>2.3</td>
+            <td><button type="button" class="btn btn-primary" color="green">Перейти</button></td>
+        </tr>
+        <tr class="active">
+            <td>3.1</td>
+            <td>3.2</td>
+            <td>3.3</td>
+            <td><button type="button" class="btn btn-primary" color="green">Перейти</button></td>
+        </tr>
+        <tr class="active">
+            <td>4.1</td>
+            <td>4.2</td>
+            <td>4.3</td>
+            <td><button type="button" class="btn btn-primary" color="green">Перейти</button></td>
+        </tr>
+      </table>
+      </table>
+
 
       <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        <div class="col-lg-6"></div>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
+        <div class="col-lg-6"></div>
       </div>
 
       <div class="footer">
