@@ -36,42 +36,36 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Главная</a></li>
+          <li class="active"><a href="/">Главная</a></li>
           <li><a href="/?r=add">Добавить</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="/about.php">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
         <h3 class="text-muted">Project name</h3>
       </div>
-
+     
       <table class="table table-hover">
-      <table class="table table-bordered">
-        <tr class="active">
-            <td width=8%>№ п/п</td>
-            <td width=42%>Пользователь</td>
-            <td width=20%>E-mail</td>
-            <td width=30%>Перейти к задачам пользователя</td>
-        </tr>
-        <tr class="active">
-            <td>2.1</td>
-            <td>2.2</td>
-            <td>2.3</td>
-            <td><button type="button" class="btn btn-primary" color="green">Перейти</button></td>
-        </tr>
-        <tr class="active">
-            <td>3.1</td>
-            <td>3.2</td>
-            <td>3.3</td>
-            <td><button type="button" class="btn btn-primary" color="green">Перейти</button></td>
-        </tr>
-        <tr class="active">
-            <td>4.1</td>
-            <td>4.2</td>
-            <td>4.3</td>
-            <td><button type="button" class="btn btn-primary" color="green">Перейти</button></td>
-        </tr>
+        <thead>
+          <tr class="active">
+              <th>#</th>
+              <th>Название</th>
+              <th>Выполнено</th>
+              <th>Создано</th>          
+          </tr>
+        </thead>
+        <tbody>
+
+        <?php foreach ($tasks as $key => $task): ?>
+          <tr class="active">
+              <td><?php echo $task["id"]; ?></td>
+              <td><?php echo $task["title"]; ?></td>
+              <td><?php echo $task["resolved"]; ?></td>
+              <td><?php echo $task["date"]; ?></td>
+          </tr>
+        <?php endforeach; ?>
+        </tbody>
       </table>
-      </table>
+
 
 
       <div class="row marketing">
@@ -81,7 +75,7 @@
       </div>
 
       <div class="footer">
-        <p>&copy; Company 2014</p>
+        <p>&copy; My To Do 2014</p>
       </div>
 
     </div> <!-- /container -->

@@ -21,13 +21,20 @@ if ($request->getRoute() == "add") {
 function todoList($request)
 {
     $pageTitle = "ToDo List";
+
+    $tasks = array(
+        array("id" => 1, "title" => "Купить молоко", "resolved" => "Нет", "date" => "06.08.14"),
+        array("id" => 2, "title" => "Проснуться", "resolved" => "Нет", "date" => "05.08.14"),
+        array("id" => 3, "title" => "Покормить кота", "resolved" => "Да", "date" => "05.08.14"),
+    );
+ 
+    include __DIR__."/app/views/list.php";
+   
     // echo $request->getParam("age");
     // echo "<br/>";
     // echo $request->getParam("name");
     // echo "<br/>";
-    // echo $request->getParam("fname", "...");
-    
-    include __DIR__."/app/views/list.php";
+    // echo $request->getParam("fname", "...");    
 }
 
 function todoDelete()
@@ -37,8 +44,7 @@ function todoDelete()
 
 // http://localhost:12345/?r=add
 function todoAdd($request)
-{
-          
+{          
     echo $request->getPost("task");
     include __DIR__."/app/views/add.php";
 }

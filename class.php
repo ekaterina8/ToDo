@@ -88,3 +88,37 @@ class Request{
 
 ф-ии и классы по работе с времене
 на бу страпе вывести красивую табличку на list - главная страничка
+
+
+
+mysql -p
+show databases; - показывает все базы данных
+
+create database название; - создание базы данных
+
+use phpcourses - используем базу данных
+
+CREATE TABLE `tasks` (
+    -> `id` int(11) NOT NULL AUTO_INCREMENT,
+    -> `title` varchar(255) DEFAULT NULL,
+    -> `resolved` tinyint(1) DEFAULT NULL,
+    -> `createdAt` datetime DEFAULT NULL,
+    -> PRIMARY KEY (`id`)
+    -> ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+show tables;
+
+INSERT INTO `tasks` (title, resolved, createdAt) VALUES ("Покормить кота", 0, NOW()); вставить данные в табличку
+
+SELECT * FROM `tasks`; - выбирает *все поля или через запятую что нужно
+
+найти различия между типами в табличках SQL - InnoDB, MyISAM 
+
+создать 3 таблички 
+
+users с полями id, name, email, password,createdAt
+pages - id, title, body, slug 
+contacts - email, body, createdAt
+
+и внести тестовые данные
+AUTO_increment=2 - начинается со 2-го индекса
