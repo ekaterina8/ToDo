@@ -44,12 +44,11 @@ class Request
         return $default;
     }
     
-    public function getPost($name, $default="")
+    public function getPost($exser, $default="")
     {
-        if (isset($_POST[$name])) {
-            return $_POST[$name];
+        if (isset($_POST[$exser])) {
+            return $_POST[$exser];
         }
         return $default;
     }
-
 }

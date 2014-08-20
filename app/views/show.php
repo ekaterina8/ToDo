@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,39 +40,19 @@
           <li><a href="/about.php">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <h3 class="text-muted">TODO</h3>
+        <h3 class="text-muted">Функции</h3>
       </div>
-     
-      <table class="table table-hover">
-        <thead>
-          <tr class="active">
-              <th>#</th>
-              <th>Название</th>
-              <th>Выполнено</th>
-              <th>Создано</th>  
-              <th>Удаление</th>   
-              <th>Просмотр</th> 
-              <th>Изменение записи</th>         
-          </tr>
-        </thead>
 
-        <tbody>
-
-        <?php while($row = $query->fetch()): ?>  
-        <tr>
-          <td><?php echo $row->id ; ?> </td>
-          <td><?php echo $row->title; ?> </td>
-          <td><?php echo $row->humanResolved() ; ?> </td>
-          <!-- <td><?php echo ($row['resolved']) ?"ДА" :"не-а" ?> </td> -->
-          <td><?php echo $row->humanDate() ; ?> </td>
-          <td> <a href="/?r=delete&id=<?php echo $row["id"]; ?>"> Удалить </td>
-          <td> <a href="/?r=show&id=<?php echo $row["id"]; ?>"> Посмотреть </td>
-          <td> <a href="/?r=update&id=<?php echo $row["id"]; ?>"> Изменить </td>
-        </tr>
-        <?php endwhile; ?> 
-
-        </tbody>
-        </table>
+      <div> 
+        <dl>
+          <dt>Название</dt>
+          <dd><?php echo $task->title ?></dd>
+          <dt>Выполнено</dt>
+          <dd><?php echo $task->humanResolved() ; ?></dd>
+          <dt>Дата</dt>
+          <dd><?php echo $task->humanDate() ; ?></dd>
+        </dl>
+      </div>
      
 
       <div class="row marketing">

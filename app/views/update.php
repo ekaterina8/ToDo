@@ -36,22 +36,6 @@
 
   <body>
 
-   <!--  <form method="POST" action="resum.php">
-        <center><p>Представьтесь, пожалуйста:</p><br />
-            <input type="text" name="name" size="50" autofocus tabindex="1" placeholder="Как Вас зовут?" /><br />
-            
-        <div class="pourpar"> 
-            Придумайте пароль
-            <input type="password" name="parol" required /><br />
-            Повторите
-            <input type="password" name="repeteParol" required /><br />
-        </div>
-
-            <input type="submit" name="send" value="Отправить" /><br />
-        </center>
-    </form>
- -->
-   
       <div class="container">
         <div class="header">
           <ul class="nav nav-pills pull-right">
@@ -60,11 +44,11 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-          <h3 class="text-muted">Добавление записи</h3>
+          <h3 class="text-muted">Изменение задачи</h3>
         </div>
 
       <div>
-          <form role="form" method="POST" action="/?r=save">         
+          <form role="form" method="POST" action="/?r=update&id=<?php echo $task["id"]; ?>" >         
 
             <div class="form-group">
         
@@ -73,14 +57,19 @@
               class="form-control" 
               name="title" 
               id="task" 
-              placeholder="Новая задача">
+              placeholder="Новая задача"
+              value="<?php echo $task['title'] ?>">
             
             </div>
       </div>
 
       <div class="checkbox">
         <label>
-            <input type="checkbox" name="resolved"> Выполнено
+            <input type="checkbox" 
+            name="resolved"
+            <?php echo $task->humanResolved() ; ?> >
+
+       <!--      <?php echo ($task['resolved']) ? "checked" : "" ;?> > --> Выполнено
         </label>
       </div>
   
